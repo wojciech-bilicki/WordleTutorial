@@ -1,0 +1,28 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="WordleTutorial"
+run/main_scene="res://Scenes/main.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Enums="*res://Scripts/enums.gd"
+
+[dotnet]
+
+project/assembly_name="WordleTutorial"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.101961, 0.101961, 0.105882, 1)

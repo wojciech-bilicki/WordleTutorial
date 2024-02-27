@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://j3lgyhcucd8o"]
+
+[ext_resource type="Script" path="res://Scripts/keyboard_button.gd" id="1_c6s5i"]
+[ext_resource type="StyleBox" uid="uid://cepaqkx0kwqjj" path="res://Themes/correct_right_placement.stylebox" id="1_ti2np"]
+[ext_resource type="StyleBox" uid="uid://beinecoiybde6" path="res://Themes/correct_wrong_placement.stylebox" id="2_4ftkx"]
+[ext_resource type="StyleBox" uid="uid://c0j4n84pev1x2" path="res://Themes/letter_available.stylebox" id="3_bk6hg"]
+[ext_resource type="StyleBox" uid="uid://dnjmibgrdryui" path="res://Themes/used.stylebox" id="4_0lmlk"]
+
+[sub_resource type="Theme" id="Theme_4x5ky"]
+correct_right_placement/base_type = &"Button"
+correct_right_placement/styles/disabled = ExtResource("1_ti2np")
+correct_right_placement/styles/focus = ExtResource("1_ti2np")
+correct_right_placement/styles/hover = ExtResource("1_ti2np")
+correct_right_placement/styles/normal = ExtResource("1_ti2np")
+correct_right_placement/styles/panel = ExtResource("2_4ftkx")
+correct_right_placement/styles/pressed = ExtResource("1_ti2np")
+correct_wrong_placement/base_type = &"Button"
+correct_wrong_placement/styles/disabled = ExtResource("2_4ftkx")
+correct_wrong_placement/styles/focus = ExtResource("2_4ftkx")
+correct_wrong_placement/styles/hover = ExtResource("2_4ftkx")
+correct_wrong_placement/styles/normal = ExtResource("2_4ftkx")
+correct_wrong_placement/styles/panel = ExtResource("2_4ftkx")
+correct_wrong_placement/styles/pressed = ExtResource("2_4ftkx")
+letter_available/base_type = &"Button"
+letter_available/styles/disabled = ExtResource("3_bk6hg")
+letter_available/styles/focus = ExtResource("3_bk6hg")
+letter_available/styles/hover = ExtResource("3_bk6hg")
+letter_available/styles/normal = ExtResource("3_bk6hg")
+letter_available/styles/panel = ExtResource("3_bk6hg")
+letter_available/styles/pressed = ExtResource("3_bk6hg")
+used/base_type = &"Button"
+used/styles/disabled = ExtResource("4_0lmlk")
+used/styles/focus = ExtResource("4_0lmlk")
+used/styles/hover = ExtResource("4_0lmlk")
+used/styles/normal = ExtResource("4_0lmlk")
+used/styles/panel = ExtResource("4_0lmlk")
+used/styles/pressed = ExtResource("4_0lmlk")
+
+[node name="KeyboardButton" type="Button"]
+custom_minimum_size = Vector2(43, 58)
+offset_right = 8.0
+offset_bottom = 8.0
+theme = SubResource("Theme_4x5ky")
+text = "A"
+script = ExtResource("1_c6s5i")

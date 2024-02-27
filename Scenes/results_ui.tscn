@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4frixfo5cdyn"]
+
+[ext_resource type="Script" path="res://Scripts/results_ui.gd" id="1_hxu2x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_363jy"]
+bg_color = Color(0.560955, 0.560955, 0.560955, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="ResultsUI" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.509286, 0.509286, 0.509286, 1)
+script = ExtResource("1_hxu2x")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_363jy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.5
+offset_top = -56.0
+offset_right = 45.5
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Word to guess:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WordLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.400108, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Agile"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResultsLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "You have won in 4 moves"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CenterContainer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Play again!"
+
+[connection signal="pressed" from="CenterContainer/Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://df3w7uial44pv"]
+
+[ext_resource type="Script" path="res://Scripts/letter_tile.gd" id="1_10jkq"]
+[ext_resource type="Theme" uid="uid://b3njydx7ngyn" path="res://Themes/letter_tile.theme" id="1_nvb2c"]
+
+[node name="LetterTile" type="Panel"]
+custom_minimum_size = Vector2(40, 40)
+theme = ExtResource("1_nvb2c")
+script = ExtResource("1_10jkq")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
